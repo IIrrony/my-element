@@ -1,0 +1,134 @@
+.vk-alert {
+  --vk-alert-padding: 8px 16px;
+  --vk-alert-border-radius: var(--vk-border-radius-base);
+  --vk-alert-title-font-size: 13px;
+  --vk-alert-description-font-size: 12px;
+  --vk-alert-close-font-size: 12px;
+  --vk-alert-close-customed-font-size: 13px;
+  --vk-alert-icon-size: 16px;
+  --vk-alert-icon-large-size: 25px;
+
+  width: 100%;
+  padding: var(--vk-alert-padding);
+  box-sizing: border-box;
+  border-radius: var(--vk-alert-border-radius);
+  position: relative;
+  background-color: var(--vk-color-white);
+  overflow: hidden;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  transition: opacity .2s;
+
+  &.is-light {
+    .vk-alert__close-btn {
+      color: var(--vk-text-color-placeholder);
+    }
+  }
+
+  &.is-dark {
+    .vk-alert__close-btn {
+      color: var(--vk-color-white);
+    }
+    .vk-alert__description {
+      color: var(--vk-color-white);
+    }
+  }
+
+  &.is-center {
+    justify-content: center;
+  }
+}
+
+.vk-alert__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 8px;
+  justify-content: center; /* 确保内容垂直居中 */
+}
+
+.vk-alert__icon {
+  font-size: var(--vk-alert-icon-size);
+  width: var(--vk-alert-icon-size);
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 图标水平居中 */
+   /* 微调图标位置 */
+
+  &.is-big {
+    font-size: var(--vk-alert-icon-large-size);
+    width: var(--vk-alert-icon-large-size);
+  }
+}
+
+.vk-alert__title {
+  font-size: var(--vk-alert-title-font-size); /* 调大字体 */
+  line-height: 18px;
+  display: block; /* 确保标题块级显示 */
+  margin: 0; /* 重置边距 */
+  padding: 0; /* 重置内边距 */
+
+  &.is-bold {
+    font-weight: bold;
+  }
+  &.is-big {
+    font-size: calc(var(--vk-alert-title-font-size) + 2px);
+  }
+}
+
+.vk-alert__description {
+  font-size: var(--vk-alert-description-font-size);
+  margin: 5px 0; /* 添加底部边距，使上下边距均衡 */
+  line-height: 1.4; /* 调整行高 */
+}
+
+.vk-alert__close {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 确保关闭按钮内容居中 */
+  margin-left: 8px;
+  cursor: pointer;
+  height: 100%; /* 占满高度 */
+}
+
+.vk-alert__close-btn {
+  font-size: var(--vk-alert-close-font-size);
+  opacity: .6;
+  color: var(--vk-text-color-regular);
+  display: flex; /* 确保图标居中 */
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@each $val in primary,success,warning,info,danger {
+  .vk-alert--$(val) {
+    &.is-light {
+      background-color: var(--vk-color-$(val)-light-9);
+      color: var(--vk-color-$(val));
+
+      .vk-alert__description {
+        color: var(--vk-color-$(val));
+      }
+    }
+
+    &.is-dark {
+      background-color: var(--vk-color-$(val));
+      color: var(--vk-color-white);
+    }
+  }
+}
+
+.vk-alert-fade-enter-from,
+.vk-alert-fade-leave-to {
+  opacity: 0;
+}
+
+.vk-alert-fade-enter-active,
+.vk-alert-fade-leave-active {
+  transition: opacity .2s;
+}
