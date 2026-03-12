@@ -1,0 +1,29 @@
+name: deploy
+
+#监听push操作
+on:
+  push:
+    branches:
+      - cicd # 这里只配置了cicd分支，所以只有推送cicd分支才会触发以下任务
+    paths-ignore: # 下列文件的变更不会触发部署
+      - README.md
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.6.2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.X
+      - run: pnpm install
+      - run: pnpm run docs:build
+      - name: action-Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.MY_ELEMENT_SECRET }}
+          BRANCH: gh-pages
+          publish_dir: ./docs/dist
+          commit_message: "自动化部署"
