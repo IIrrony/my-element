@@ -7,6 +7,7 @@ import { containerPreview, componentPreview } from '@vitepress-demo-preview/plug
 export default defineConfig({
   title: "My Element-UI",
   description: "A VitePress Site",
+  base: './',
   vite: {
     plugins: [
       VueMacros.vite({
@@ -38,14 +39,6 @@ export default defineConfig({
     ],
 
     sidebar: [
-      // {
-      //   text: 'Examples',
-      //   items: [
-      //     { text: 'Markdown Examples', link: '/markdown-examples' },
-      //     { text: 'Runtime API Examples', link: '/api-examples' },
-      //     { text: 'Test here', link: '/api-examples' }
-      //   ]
-      // },
       {
         text: 'MY Element-UI 组件列表',
         items: [
