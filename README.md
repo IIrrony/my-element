@@ -12,57 +12,7 @@
 - 🎯 支持按需引入
 - 🌍 支持 ES Module 和 UMD 两种构建格式
 
-## 📦 安装
-
-使用 npm:
-
-```bash
-npm install vikingmute/element
-```
-
-使用 pnpm:
-
-```bash
-pnpm add vikingmute/element
-```
-
-使用 yarn:
-
-```bash
-yarn add vikingmute/element
-```
-
-## 🔨 使用
-
-### 完整引入
-
-```ts
-import { createApp } from "vue";
-import VElement from "vikingmute/element";
-import "vikingmute/element/dist/index.css";
-import App from "./App.vue";
-
-const app = createApp(App);
-app.use(VElement);
-app.mount("#app");
-```
-
-### 按需引入
-
-```vue
-<script setup lang="ts">
-import { VButton, VInput, VAlert } from "vikingmute/element";
-import "vikingmute/element/dist/index.css";
-</script>
-
-<template>
-  <VButton type="primary">按钮</VButton>
-  <VInput v-model="value" placeholder="请输入内容" />
-  <VAlert title="成功提示" type="success" />
-</template>
-```
-
-## 📑 组件列表
+## � 组件列表
 
 - **Alert** - 警告提示
 - **Button** - 按钮
@@ -76,26 +26,128 @@ import "vikingmute/element/dist/index.css";
 - **Switch** - 开关
 - **Tooltip** - 文字提示
 
-## 📖 文档
+## 📖 在线文档
 
-完整文档请访问：[https://iirrony.github.io](https://iirrony.github.io)
+完整文档请访问：[https://iirrony.github.io/my-element/](https://iirrony.github.io/my-element/)
 
-## 🛠️ 开发
+## 🚀 快速开始
 
 ### 环境要求
 
 - Node.js 16+
-- pnpm 7+
+- pnpm 8+
 
 ### 推荐 IDE 配置
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
-### 克隆项目
+### 1. 克隆项目
 
 ```bash
 git clone <repository-url>
-cd v-element
+cd my-element
+```
+
+### 2. 安装依赖
+
+```bash
+pnpm install
+```
+
+### 3. 启动开发服务器
+
+运行组件开发环境：
+
+```bash
+pnpm dev
+```
+
+访问 http://localhost:5173 查看组件示例。
+
+### 4. 启动文档服务器
+
+运行 VitePress 文档：
+
+```bash
+pnpm docs:dev
+```
+
+访问 http://localhost:5173 查看完整文档和组件展示。
+
+文档源码位于 `docs/` 目录下，包含：
+
+- 组件文档：`docs/components/`
+- 组件演示：`docs/demo/`
+- VitePress 配置：`docs/.vitepress/`
+
+## 🛠️ 构建
+
+### 构建组件库
+
+构建 ES Module 和 UMD 两种格式：
+
+```bash
+pnpm build
+```
+
+生成的文件位于 `dist/` 目录：
+
+- `dist/es/` - ES Module 格式
+- `dist/umd/` - UMD 格式
+- `dist/types/` - TypeScript 类型声明
+- `dist/index.css` - 样式文件
+
+### 构建文档
+
+构建 VitePress 静态站点：
+
+```bash
+pnpm docs:build
+```
+
+生成的文件位于 `docs/.vitepress/dist/` 目录。
+
+### 预览构建结果
+
+预览组件库构建：
+
+```bash
+pnpm preview
+```
+
+预览文档构建：
+
+```bash
+pnpm docs:preview
+```
+
+## 📝 其他命令
+
+```bash
+# 类型检查
+pnpm type-check
+
+# 代码检查和修复
+pnpm lint
+
+# 运行测试
+pnpm test
+```
+
+## 📂 项目结构
+
+```
+my-element/
+├── src/                    # 组件源码
+│   ├── components/        # 组件目录
+│   ├── hooks/             # 组合式函数
+│   └── styles/            # 样式文件
+├── docs/                  # VitePress 文档
+│   ├── .vitepress/       # VitePress 配置
+│   ├── components/       # 组件文档
+│   └── demo/             # 组件演示
+├── dist/                  # 构建产物
+└── public/               # 静态资源
 ```
 
 ### 安装依赖
