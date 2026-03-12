@@ -7,7 +7,7 @@ import { containerPreview, componentPreview } from '@vitepress-demo-preview/plug
 export default defineConfig({
   title: "My Element-UI",
   description: "A VitePress Site",
-  base: './',
+  base: '/my-element/',
   vite: {
     plugins: [
       VueMacros.vite({
@@ -58,7 +58,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/IIrrony/my-element' }
     ]
   }
 })
