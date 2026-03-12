@@ -11,7 +11,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import vkSwitch from '@/components/Switch/switch.vue'
+import vkSwitch from '@/components/Switch/Switch.vue'
 
 const value = ref('100')
 </script>

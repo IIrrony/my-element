@@ -7,7 +7,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import vkSwitch from '@/components/Switch/switch.vue'
+import vkSwitch from '@/components/Switch/Switch.vue'
 
 const value1 = ref(true)
 const value2 = ref(true)
