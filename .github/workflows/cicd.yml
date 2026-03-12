@@ -11,17 +11,28 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4 # 升级到 v4
         with:
           version: 8.6.2
-      - uses: actions/setup-node@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 20.X
-      - run: pnpm install
-      - run: pnpm run docs:build
-      - name: action-Deploy
-        uses: peaceiris/actions-gh-pages@v3
+          node-version: 20
+          cache: 'pnpm' # 优化：开启 pnpm 缓存，加快构建速度
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build project
+        run: pnpm run docs:build
+
+      - name: Action-Deploy
+        uses: peaceiris/actions-gh-pages@v4 # 核心修改：升级到 v4 解决 Node 警告
         with:
           github_token: ${{ secrets.MY_ELEMENT_SECRET }}
           BRANCH: gh-pages
