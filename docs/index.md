@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "My Element 组件库"
   text: "Especially Good！"
-  tagline:  Vue3 + TS 高仿 ElementPlus 的组件库
+  tagline: Vue3 + TS My Element-UI 的组件库
   actions:
     - theme: brand
       text: 开始使用
@@ -15,10 +15,10 @@ hero:
       link: /components/alert
 
 features:
-  - title: “全”
-    details: 精选十几个组件，可以涵盖大部分的主流组件的设计思想以及原理，知识覆盖面全。
-  - title: “新”
-    details: Vue3 周边最新 ，最全技术：Vue3 + Typescript， Vite，Vitest， Vitepress，Vue-test-utils2，Rollup, Postcss 一网打尽。
-  - title: “难”
-    details: 包含各种高难度高复杂组件。
+  - title: "现代化技术栈"
+    details: 基于 Vue 3 Composition API + TypeScript 构建，提供完整的类型支持和开发体验。
+  - title: "完善的组件库"
+    details: 包含 Alert、Button、Form、Input、Select、Tooltip 等常用组件，满足基础业务需求。
+  - title: "工程化实践"
+    details: 使用 Vite、Vitest、VitePress 构建，支持 ES Module 和 UMD 两种构建格式。
 ---
