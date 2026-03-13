@@ -1,11 +1,11 @@
 ---
-title: Tooltip | V-Element
-description: Tooltip 组件的文档
+title: Tooltip | My-Element
+description: Tooltip 文字提示组件的文档
 ---
 
 # Tooltip 文字提示
 
-常用于展示鼠标 hover 或点击时的提示信息。
+常用于展示鼠标 hover 或点击时的提示信息，支持多种弹出位置和触发方式。
 
 ## 基础用法
 
@@ -41,34 +41,34 @@ Tooltip 组件提供了两种触发方式：`hover` 和 `click`。
 
 ## Attributes
 
-| 参数           | 说明                            | 类型                 | 默认值  |
-| -------------- | ------------------------------- | -------------------- | ------- |
-| content        | 显示的内容                      | String               | —       |
-| placement      | Tooltip 的出现位置              | String               | bottom  |
-| trigger        | 触发方式                        | String               | hover   |
-| manual         | 是否手动控制模式                | Boolean              | false   |
-| popperOptions  | popper.js 的参数                | Object               | —       |
-| transition     | 动画名称                        | String               | fade    |
-| openDelay      | 延迟出现，单位毫秒              | Number               | 0       |
-| closeDelay     | 延迟关闭，单位毫秒              | Number               | 0       |
+| 参数          | 说明               | 类型    | 默认值 |
+| ------------- | ------------------ | ------- | ------ |
+| content       | 显示的内容         | String  | —      |
+| placement     | Tooltip 的出现位置 | String  | bottom |
+| trigger       | 触发方式           | String  | hover  |
+| manual        | 是否手动控制模式   | Boolean | false  |
+| popperOptions | popper.js 的参数   | Object  | —      |
+| transition    | 动画名称           | String  | fade   |
+| openDelay     | 延迟出现，单位毫秒 | Number  | 0      |
+| closeDelay    | 延迟关闭，单位毫秒 | Number  | 0      |
 
 ## Events
 
-| 事件名          | 说明                           | 回调参数             |
-| --------------- | ------------------------------ | -------------------- |
-| visible-change  | 显示状态变更时触发             | 新的显示状态 (Boolean) |
-| click-outside   | 点击外部时触发                 | —                    |
+| 事件名         | 说明               | 回调参数               |
+| -------------- | ------------------ | ---------------------- |
+| visible-change | 显示状态变更时触发 | 新的显示状态 (Boolean) |
+| click-outside  | 点击外部时触发     | —                      |
 
 ## Slots
 
-| 插槽名          | 说明                           |
-| --------------- | ------------------------------ |
-| —               | Tooltip 触发的元素             |
-| content         | 自定义内容                     |
+| 插槽名  | 说明               |
+| ------- | ------------------ |
+| —       | Tooltip 触发的元素 |
+| content | 自定义内容         |
 
 ## Methods
 
-| 方法名          | 说明                           | 参数                 |
-| --------------- | ------------------------------ | -------------------- |
-| show            | 显示 Tooltip                   | —                    |
-| hide            | 隐藏 Tooltip                   | —                    |
+| 方法名 | 说明         | 参数 |
+| ------ | ------------ | ---- |
+| show   | 显示 Tooltip | —    |
+| hide   | 隐藏 Tooltip | —    |

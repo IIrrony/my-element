@@ -1,6 +1,6 @@
 ---
-title: Dropdown | V-Element
-description: Dropdown 组件的文档
+title: Dropdown | My-Element
+description: Dropdown 下拉菜单组件的文档
 ---
 
 # Dropdown 下拉菜单
@@ -41,26 +41,26 @@ description: Dropdown 组件的文档
 
 ### Dropdown Attributes
 
-| 名称           | 说明                                                                                                    | 类型                                                                                                               | 默认值 |
-| -------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------ |
-| menuOptions    | 下拉菜单选项                                                                                            | `array<{ label: string \| VNode, key: string \| number, disabled?: boolean, divided?: boolean }>`                  | []     |
-| placement      | 菜单弹出位置                                                                                            | `enum` - `'top' \| 'top-start' \| 'top-end' \| 'bottom' \| 'bottom-start' \| 'bottom-end' \| 'left' \| 'right'`   | bottom |
-| trigger        | 触发下拉的行为                                                                                          | `enum` - `'hover' \| 'click'`                                                                                      | hover  |
-| hideAfterClick | 点击菜单项后隐藏菜单                                                                                    | `boolean`                                                                                                          | true   |
-| transition     | 过渡动画名称                                                                                            | `string`                                                                                                           | fade   |
-| openDelay      | 展开延时，单位为毫秒                                                                                    | `number`                                                                                                           | 0      |
-| closeDelay     | 关闭延时，单位为毫秒                                                                                    | `number`                                                                                                           | 0      |
-| popperOptions  | popper.js 的选项                                                                                        | `object`                                                                                                           | —      |
+| 名称           | 说明                 | 类型                                                                                                            | 默认值 |
+| -------------- | -------------------- | --------------------------------------------------------------------------------------------------------------- | ------ |
+| menuOptions    | 下拉菜单选项         | `array<{ label: string \| VNode, key: string \| number, disabled?: boolean, divided?: boolean }>`               | []     |
+| placement      | 菜单弹出位置         | `enum` - `'top' \| 'top-start' \| 'top-end' \| 'bottom' \| 'bottom-start' \| 'bottom-end' \| 'left' \| 'right'` | bottom |
+| trigger        | 触发下拉的行为       | `enum` - `'hover' \| 'click'`                                                                                   | hover  |
+| hideAfterClick | 点击菜单项后隐藏菜单 | `boolean`                                                                                                       | true   |
+| transition     | 过渡动画名称         | `string`                                                                                                        | fade   |
+| openDelay      | 展开延时，单位为毫秒 | `number`                                                                                                        | 0      |
+| closeDelay     | 关闭延时，单位为毫秒 | `number`                                                                                                        | 0      |
+| popperOptions  | popper.js 的选项     | `object`                                                                                                        | —      |
 
 ### Dropdown Events
 
-| 名称           | 说明                   | 类型                                                                                                |
-| -------------- | ---------------------- | --------------------------------------------------------------------------------------------------- |
-| visible-change | 下拉框出现/隐藏时触发  | `function(visible: boolean)`                                                                        |
-| select         | 选中下拉选项时触发     | `function(item: { label: string \| VNode, key: string \| number, disabled?: boolean, divided?: boolean })` |
+| 名称           | 说明                  | 类型                                                                                                       |
+| -------------- | --------------------- | ---------------------------------------------------------------------------------------------------------- |
+| visible-change | 下拉框出现/隐藏时触发 | `function(visible: boolean)`                                                                               |
+| select         | 选中下拉选项时触发    | `function(item: { label: string \| VNode, key: string \| number, disabled?: boolean, divided?: boolean })` |
 
 ### Dropdown Slots
 
-| 名称    | 说明                                                   |
-| ------- | ------------------------------------------------------ |
-| default | 触发下拉菜单显示的元素                                 |
+| 名称    | 说明                   |
+| ------- | ---------------------- |
+| default | 触发下拉菜单显示的元素 |

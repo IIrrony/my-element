@@ -1,6 +1,6 @@
 ---
-title: Collapse | V-Element
-description: Collapse 组件的文档
+title: Collapse | My-Element
+description: Collapse 折叠面板组件的文档
 ---
 
 # Collapse 折叠面板
@@ -35,28 +35,28 @@ description: Collapse 组件的文档
 
 ### Collapse Attributes
 
-| 名称                    | 说明                                                                      | 类型                | 默认值 |
-| ----------------------- | ------------------------------------------------------------------------- | ------------------- | ------ |
-| model-value / v-model   | 当前激活的面板（如果是手风琴模式，绑定值类型需要为 string，否则为 array） | `array / string`    | —      |
-| accordion               | 是否手风琴模式                                                            | `boolean`           | false  |
+| 名称                  | 说明                                                                      | 类型             | 默认值 |
+| --------------------- | ------------------------------------------------------------------------- | ---------------- | ------ |
+| model-value / v-model | 当前激活的面板（如果是手风琴模式，绑定值类型需要为 string，否则为 array） | `array / string` | —      |
+| accordion             | 是否手风琴模式                                                            | `boolean`        | false  |
 
 ### Collapse Events
 
-| 名称   | 说明                                                                                                | 类型                                           |
-| ------ | --------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| change | 当前激活面板改变时触发                                                                              | `function(activeNames: array / string)`        |
+| 名称   | 说明                   | 类型                                    |
+| ------ | ---------------------- | --------------------------------------- |
+| change | 当前激活面板改变时触发 | `function(activeNames: array / string)` |
 
 ### CollapseItem Attributes
 
-| 名称     | 说明       | 类型               | 默认值 |
-| -------- | ---------- | ------------------ | ------ |
-| name     | 唯一标识符 | `string / number`  | —      |
-| title    | 面板标题   | `string`           | —      |
-| disabled | 是否禁用   | `boolean`          | false  |
+| 名称     | 说明       | 类型              | 默认值 |
+| -------- | ---------- | ----------------- | ------ |
+| name     | 唯一标识符 | `string / number` | —      |
+| title    | 面板标题   | `string`          | —      |
+| disabled | 是否禁用   | `boolean`         | false  |
 
 ### CollapseItem Slots
 
-| 名称    | 说明                          |
-| ------- | ----------------------------- |
-| default | CollapseItem 的内容           |
-| title   | 自定义标题内容                |
+| 名称    | 说明                |
+| ------- | ------------------- |
+| default | CollapseItem 的内容 |
+| title   | 自定义标题内容      |

@@ -1,6 +1,6 @@
 ---
-title: Switch | V-Element
-description: Switch 组件的文档
+title: Switch | My-Element
+description: Switch 开关组件的文档
 ---
 
 # Switch 开关
@@ -41,22 +41,21 @@ description: Switch 组件的文档
 
 ### Switch Attributes
 
-| Name           | Description                        | Type                                    | Default |
-| -------------- | ---------------------------------- | --------------------------------------- | ------- |
-| model-value / v-model | 绑定值                      | `boolean / string / number`             | —       |
-| disabled       | 是否禁用状态                       | `boolean`                               | false   |
-| active-text    | switch 打开时的文字描述            | `string`                                | —       |
-| inactive-text  | switch 关闭时的文字描述            | `string`                                | —       |
-| active-value   | switch 打开时的值                  | `boolean / string / number`             | true    |
-| inactive-value | switch 关闭时的值                  | `boolean / string / number`             | false   |
-| name           | switch 对应的 name 属性            | `string`                                | —       |
-| id             | input 的 id                        | `string`                                | —       |
-| size           | switch 的尺寸                      | `enum` - `'large' \| 'small'`           | —       |
+| Name                  | Description             | Type                          | Default |
+| --------------------- | ----------------------- | ----------------------------- | ------- |
+| model-value / v-model | 绑定值                  | `boolean / string / number`   | —       |
+| disabled              | 是否禁用状态            | `boolean`                     | false   |
+| active-text           | switch 打开时的文字描述 | `string`                      | —       |
+| inactive-text         | switch 关闭时的文字描述 | `string`                      | —       |
+| active-value          | switch 打开时的值       | `boolean / string / number`   | true    |
+| inactive-value        | switch 关闭时的值       | `boolean / string / number`   | false   |
+| name                  | switch 对应的 name 属性 | `string`                      | —       |
+| id                    | input 的 id             | `string`                      | —       |
+| size                  | switch 的尺寸           | `enum` - `'large' \| 'small'` | —       |
 
 ### Switch Events
 
-| Name              | Description                  | Type                                |
-| ----------------- | ---------------------------- | ----------------------------------- |
+| Name              | Description                     | Type                                           |
+| ----------------- | ------------------------------- | ---------------------------------------------- |
 | change            | switch 状态发生变化时的回调函数 | `function(value: boolean \| string \| number)` |
-| update:modelValue | 值更新时触发                  | `function(value: boolean \| string \| number)` |
-
+| update:modelValue | 值更新时触发                    | `function(value: boolean \| string \| number)` |

@@ -15,3 +15,67 @@ body {
 h1, h2, h3, h4, h5, h6, p {
   color: var(--vp-c-text-1);
 }
+
+/* API 表格样式优化 */
+.vp-doc table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.vp-doc table thead tr {
+  background-color: var(--vp-c-bg-soft);
+}
+
+.vp-doc table th {
+  padding: 10px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  border-bottom: 2px solid var(--vp-c-divider);
+  white-space: nowrap;
+}
+
+.vp-doc table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+  vertical-align: middle;
+}
+
+.vp-doc table td:first-child {
+  color: var(--vp-c-text-1);
+  font-weight: 500;
+}
+
+.vp-doc table td code {
+  font-size: 12px;
+  padding: 2px 6px;
+  background-color: var(--vp-c-bg-mute);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.vp-doc table tr:hover td {
+  background-color: var(--vp-c-bg-soft);
+}
+
+/* 组件 demo 预览区间距 */
+.component-preview-wrapper {
+  margin: 24px 0;
+}
+
+/* h2 标题上方增加间距 */
+.vp-doc h2 {
+  margin-top: 40px;
+  padding-top: 24px;
+}
+
+/* h3 小节标题 */
+.vp-doc h3 {
+  margin-top: 28px;
+  font-size: 16px;
+  color: var(--vp-c-text-1);
+}

@@ -1,11 +1,11 @@
 ---
-title: Alert | V-Element
-description: Alert 组件的文档
+title: Alert | My-Element
+description: Alert 提示组件的文档
 ---
 
 # Alert 提示
 
-用于页面中展示重要的提示信息。
+用于页面中展示重要的提示信息，支持多种类型和主题。
 
 ## 基础用法
 
@@ -47,26 +47,26 @@ Alert 组件提供了两种不同的主题：`light` 和 `dark`。通过设置 `
 
 ### Alert Attributes
 
-| 名称        | 说明                                 | 类型                                                | 默认值  |
-| ----------- | ------------------------------------ | --------------------------------------------------- | ------- |
-| title       | 标题                                 | `string`                                            | —       |
-| content     | 内容（已废弃，请使用 description）   | `string`                                            | —       |
-| type        | 类型                                 | `enum` - `'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | info    |
-| effect      | 主题                                 | `enum` - `'light' \| 'dark'`                        | light   |
-| closable    | 是否可关闭                           | `boolean`                                           | true    |
-| showIcon    | 是否显示图标                         | `boolean`                                           | false   |
-| center      | 文字是否居中                         | `boolean`                                           | false   |
-| description | 描述性文字                           | `string`                                            | —       |
+| 名称        | 说明                               | 类型                                                                 | 默认值 |
+| ----------- | ---------------------------------- | -------------------------------------------------------------------- | ------ |
+| title       | 标题                               | `string`                                                             | —      |
+| content     | 内容（已废弃，请使用 description） | `string`                                                             | —      |
+| type        | 类型                               | `enum` - `'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | info   |
+| effect      | 主题                               | `enum` - `'light' \| 'dark'`                                         | light  |
+| closable    | 是否可关闭                         | `boolean`                                                            | true   |
+| showIcon    | 是否显示图标                       | `boolean`                                                            | false  |
+| center      | 文字是否居中                       | `boolean`                                                            | false  |
+| description | 描述性文字                         | `string`                                                             | —      |
 
 ### Alert Events
 
-| 名称  | 说明                    | 类型                  |
-| ----- | ----------------------- | --------------------- |
-| close | 关闭 Alert 时触发的事件 | `function() => void`  |
+| 名称  | 说明                    | 类型                 |
+| ----- | ----------------------- | -------------------- |
+| close | 关闭 Alert 时触发的事件 | `function() => void` |
 
 ### Alert Slots
 
-| 名称    | 说明                |
-| ------- | ------------------- |
-| default | Alert 的描述内容    |
-| title   | Alert 的标题内容    |
+| 名称    | 说明             |
+| ------- | ---------------- |
+| default | Alert 的描述内容 |
+| title   | Alert 的标题内容 |
