@@ -58,7 +58,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/IIrrony/my-element' }
+      { icon: 'github', link: '' }
     ]
   }
 })
